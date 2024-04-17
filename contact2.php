@@ -146,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->close();
 
         $full_message = "";
-        myMail('terence.renard@gmail.com', $sujet, $full_message);
+        myMail('XXXXX', $sujet, $full_message);
         $correct['envoie'] = "<h1 style='text-align:center; color:green;'>Votre message a été envoyé avec succès.</h1>";
     } else {
         $avertissement['non_envoie'] = "<h1 style='text-align:center; color:red;'>Veuillez corriger les erreurs dans le formulaire.</h1>";
