@@ -3,7 +3,7 @@ Code source (données sensibles censurées) du cabinet dentaire Dumitrascu Roxan
 
 # Comment faire fonctionner le site web ?
 - Placez le code source de façon à pouvoir l'exécuter dans un environnement comme WampServer ou XAMPP
-- Récupérez le fichier .sql et importez-la dans une base de données avec PHPMyAdmin, n'hésitez pas à regarder dans le fichier /Include/Database/config.php pour mettre les bonnes informations afin de faire la connexion à la base de données.
+- Récupérez le fichier .sql et importez-la dans une base de données avec PHPMyAdmin, n'hésitez pas à regarder dans le fichier /Include/Database/config.php pour mettre les bonnes informations afin de faire la connexion avec la base de données.
 - Amusez-vous bien !
 
 # Comment accéder à la partie "admin" ?
