@@ -12,7 +12,9 @@ Code source (données sensibles censurées) du cabinet dentaire Dumitrascu Roxan
 - Mettez le libellé que vous souhaitez, puis "Sur la base d'un score (v3)", et pour la partie Domaines, mettez 127.0.0.1 si vous testez le site en localhost
 - Une fois les conditions d'utilisation acceptées, vous obtenez enfin votre clé publique et votre clé privée (**attention à ne pas confondre les deux**).
 - **Vous devez remplacer les XXXXX par la suite de caractères indiquée :**
+- 
   **>** Lignes à modifier avec la clé privée : login.php (ligne 12), contact.php (ligne 81)
+  
   **>** Lignes à modifier avec la clé publique : login.php (lignes 58 & 68), contact.php (lignes 257 & 262)
 - Testez ! Attention à ne pas faire d'erreur lors du remplacement des caractères par vos clés !
 
