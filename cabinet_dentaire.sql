@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 17 avr. 2024 à 20:37
+-- Généré le : mer. 29 mai 2024 à 01:58
 -- Version du serveur : 8.2.0
 -- Version de PHP : 8.2.13
 
@@ -33,94 +33,45 @@ CREATE TABLE IF NOT EXISTS `action` (
   `action` varchar(255) NOT NULL,
   `date` datetime NOT NULL,
   `ip` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `utilisateur_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_utilisateur` (`utilisateur_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=121 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `action`
 --
 
-INSERT INTO `action` (`id`, `action`, `date`, `ip`) VALUES
-(12, 'Suppression réussie d\'un administrateur', '2024-02-18 04:15:26', '127.0.0.1'),
-(13, 'Suppression réussie d\'un administrateur', '2024-02-18 04:26:11', '127.0.0.1'),
-(14, 'Suppression réussie d\'un administrateur', '2024-02-18 04:26:12', '127.0.0.1'),
-(15, 'Ajout d\'une horaire réussie', '2024-02-18 04:26:24', '127.0.0.1'),
-(16, 'Connexion réussie', '2024-02-18 04:44:46', '127.0.0.1'),
-(17, 'Ajout d\'une horaire réussie', '2024-02-18 06:02:53', '127.0.0.1'),
-(18, 'Suppression d\'une horaire réussie', '2024-02-18 06:02:59', '127.0.0.1'),
-(19, 'Suppression d\'une horaire réussie', '2024-02-18 16:03:42', '127.0.0.1'),
-(20, 'Connexion réussie', '2024-02-18 21:05:41', '127.0.0.1'),
-(21, 'Connexion réussie', '2024-02-18 21:12:00', '127.0.0.1'),
-(22, 'Connexion réussie', '2024-02-18 21:15:33', '127.0.0.1'),
-(23, 'Connexion réussie', '2024-02-19 01:37:49', '127.0.0.1'),
-(24, 'Ajout d\'une horaire réussie', '2024-02-19 01:38:10', '127.0.0.1'),
-(25, 'Suppression d\'une horaire réussie', '2024-02-19 01:38:22', '127.0.0.1'),
-(26, 'Connexion réussie', '2024-02-19 02:19:11', '127.0.0.1'),
-(27, 'Connexion réussie', '2024-02-19 02:56:25', '127.0.0.1'),
-(28, 'Ajout d\'une horaire réussie', '2024-02-19 02:56:49', '127.0.0.1'),
-(29, 'Connexion réussie', '2024-03-12 22:44:25', '127.0.0.1'),
-(30, 'Ajout d\'une horaire réussie', '2024-03-12 22:44:51', '127.0.0.1'),
-(31, 'Suppression d\'une horaire réussie', '2024-03-12 22:44:53', '127.0.0.1'),
-(32, 'Ajout de plusieurs horaires réussies', '2024-03-12 22:45:38', '127.0.0.1'),
-(33, 'Suppression d\'une horaire réussie', '2024-03-12 22:45:47', '127.0.0.1'),
-(34, 'Suppression d\'une horaire réussie', '2024-03-12 22:45:50', '127.0.0.1'),
-(35, 'Suppression d\'une horaire réussie', '2024-03-12 22:46:22', '127.0.0.1'),
-(36, 'Suppression d\'une horaire réussie', '2024-03-12 22:46:24', '127.0.0.1'),
-(37, 'Suppression d\'une horaire réussie', '2024-03-12 22:46:25', '127.0.0.1'),
-(38, 'Suppression d\'une horaire réussie', '2024-03-12 22:46:26', '127.0.0.1'),
-(39, 'Suppression d\'une horaire réussie', '2024-03-12 22:46:27', '127.0.0.1'),
-(40, 'Suppression d\'une horaire réussie', '2024-03-12 22:46:29', '127.0.0.1'),
-(41, 'Suppression d\'une horaire réussie', '2024-03-12 22:46:31', '127.0.0.1'),
-(42, 'Suppression d\'une horaire réussie', '2024-03-12 22:46:33', '127.0.0.1'),
-(43, 'Ajout d\'une horaire réussie', '2024-03-12 22:46:44', '127.0.0.1'),
-(44, 'Suppression d\'une horaire réussie', '2024-03-12 22:46:46', '127.0.0.1'),
-(45, 'Suppression de plusieurs horaires réussies', '2024-03-12 22:47:05', '127.0.0.1'),
-(46, 'Suppression d\'une horaire réussie', '2024-03-12 22:47:09', '127.0.0.1'),
-(47, 'Connexion réussie', '2024-03-13 08:53:40', '127.0.0.1'),
-(48, 'Connexion réussie', '2024-03-13 10:38:31', '127.0.0.1'),
-(49, 'Ajout de plusieurs horaires réussies', '2024-03-13 10:39:13', '127.0.0.1'),
-(50, 'Suppression d\'une horaire réussie', '2024-03-13 10:39:26', '127.0.0.1'),
-(51, 'Suppression de plusieurs horaires réussies', '2024-03-13 10:39:40', '127.0.0.1'),
-(52, 'Suppression d\'une horaire réussie', '2024-03-13 10:39:46', '127.0.0.1'),
-(53, 'Suppression d\'une horaire réussie', '2024-03-13 10:39:48', '127.0.0.1'),
-(54, 'Suppression d\'une horaire réussie', '2024-03-13 10:39:56', '127.0.0.1'),
-(55, 'Suppression d\'une horaire réussie', '2024-03-13 10:40:02', '127.0.0.1'),
-(56, 'Suppression d\'une horaire réussie', '2024-03-13 10:40:05', '127.0.0.1'),
-(57, 'Ajout de plusieurs horaires réussies', '2024-03-13 10:41:10', '127.0.0.1'),
-(58, 'Suppression d\'une horaire réussie', '2024-03-13 10:41:16', '127.0.0.1'),
-(59, 'Suppression d\'une horaire réussie', '2024-03-13 10:41:18', '127.0.0.1'),
-(60, 'Suppression d\'une horaire réussie', '2024-03-13 10:41:20', '127.0.0.1'),
-(61, 'Suppression d\'une horaire réussie', '2024-03-13 10:41:24', '127.0.0.1'),
-(62, 'Suppression d\'une horaire réussie', '2024-03-13 10:41:27', '127.0.0.1'),
-(63, 'Suppression d\'une horaire réussie', '2024-03-13 10:41:29', '127.0.0.1'),
-(64, 'Suppression d\'une horaire réussie', '2024-03-13 10:41:37', '127.0.0.1'),
-(65, 'Suppression d\'une horaire réussie', '2024-03-13 10:41:39', '127.0.0.1'),
-(66, 'Ajout d\'une horaire réussie', '2024-03-13 10:42:18', '127.0.0.1'),
-(67, 'Suppression d\'une horaire réussie', '2024-03-13 10:42:20', '127.0.0.1'),
-(68, 'Suppression d\'une horaire réussie', '2024-03-13 10:42:25', '127.0.0.1'),
-(69, 'Suppression d\'une horaire réussie', '2024-03-13 10:42:26', '127.0.0.1'),
-(70, 'Suppression d\'une horaire réussie', '2024-03-13 10:42:30', '127.0.0.1'),
-(71, 'Suppression d\'une horaire réussie', '2024-03-13 10:42:31', '127.0.0.1'),
-(72, 'Suppression d\'une horaire réussie', '2024-03-13 10:45:04', '127.0.0.1'),
-(73, 'Suppression d\'une horaire réussie', '2024-03-13 10:45:05', '127.0.0.1'),
-(74, 'Suppression d\'une horaire réussie', '2024-03-13 10:45:07', '127.0.0.1'),
-(75, 'Suppression d\'une horaire réussie', '2024-03-13 10:45:08', '127.0.0.1'),
-(76, 'Suppression de plusieurs horaires réussies', '2024-03-13 10:45:23', '127.0.0.1'),
-(77, 'Ajout d\'une horaire réussie', '2024-03-13 10:45:46', '127.0.0.1'),
-(78, 'Suppression d\'une horaire réussie', '2024-03-13 10:45:48', '127.0.0.1'),
-(79, 'Ajout de plusieurs horaires réussies', '2024-03-13 10:46:19', '127.0.0.1'),
-(80, 'Suppression d\'une horaire réussie', '2024-03-13 10:46:20', '127.0.0.1'),
-(81, 'Suppression d\'une horaire réussie', '2024-03-13 10:46:23', '127.0.0.1'),
-(82, 'Ajout d\'une horaire réussie', '2024-03-13 17:21:04', '127.0.0.1'),
-(83, 'Suppression d\'une horaire réussie', '2024-03-13 17:21:08', '127.0.0.1'),
-(84, 'Suppression d\'une horaire réussie', '2024-03-13 20:24:10', '127.0.0.1'),
-(85, 'Connexion réussie', '2024-04-10 18:08:06', '127.0.0.1'),
-(86, 'Ajout réussi d\'un administrateur', '2024-04-10 18:09:46', '127.0.0.1'),
-(87, 'Connexion réussie', '2024-04-17 22:36:11', '127.0.0.1'),
-(88, 'Suppression réussie d\'un administrateur', '2024-04-17 22:36:17', '127.0.0.1'),
-(89, 'Suppression réussie d\'un administrateur', '2024-04-17 22:36:18', '127.0.0.1'),
-(90, 'Ajout réussi d\'un administrateur', '2024-04-17 22:36:53', '127.0.0.1'),
-(91, 'Suppression réussie d\'un administrateur', '2024-04-17 22:36:55', '127.0.0.1');
+INSERT INTO `action` (`id`, `action`, `date`, `ip`, `utilisateur_id`) VALUES
+(90, 'Ajout réussi d\'un administrateur', '2024-04-17 22:36:53', '127.0.0.1', 28),
+(91, 'Suppression réussie d\'un administrateur', '2024-04-17 22:36:55', '127.0.0.1', 28),
+(94, 'Connexion réussie', '2024-05-29 03:30:09', '127.0.0.1', 28),
+(95, 'Modification réussie d\'un administrateur', '2024-05-29 03:32:53', '127.0.0.1', 28),
+(96, 'Modification réussie d\'un administrateur', '2024-05-29 03:33:04', '127.0.0.1', 28),
+(97, 'Suppression d\'une horaire réussie', '2024-05-29 03:33:14', '127.0.0.1', 28),
+(98, 'Suppression d\'une horaire réussie', '2024-05-29 03:33:20', '127.0.0.1', 28),
+(99, 'Suppression d\'une horaire réussie', '2024-05-29 03:33:27', '127.0.0.1', 28),
+(100, 'Suppression d\'une horaire réussie', '2024-05-29 03:33:28', '127.0.0.1', 28),
+(101, 'Ajout d\'une horaire réussie', '2024-05-29 03:33:41', '127.0.0.1', 28),
+(102, 'Suppression d\'une horaire réussie', '2024-05-29 03:33:44', '127.0.0.1', 28),
+(103, 'Suppression d\'une horaire réussie', '2024-05-29 03:34:02', '127.0.0.1', 28),
+(104, 'Suppression d\'une horaire réussie', '2024-05-29 03:34:04', '127.0.0.1', 28),
+(105, 'Suppression d\'une horaire réussie', '2024-05-29 03:34:05', '127.0.0.1', 28),
+(106, 'Suppression d\'une horaire réussie', '2024-05-29 03:34:10', '127.0.0.1', 28),
+(107, 'Ajout de plusieurs horaires réussies', '2024-05-29 03:34:59', '127.0.0.1', 28),
+(108, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:01', '127.0.0.1', 28),
+(109, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:02', '127.0.0.1', 28),
+(110, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:03', '127.0.0.1', 28),
+(111, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:05', '127.0.0.1', 28),
+(112, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:07', '127.0.0.1', 28),
+(113, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:08', '127.0.0.1', 28),
+(114, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:10', '127.0.0.1', 28),
+(115, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:25', '127.0.0.1', 28),
+(116, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:35', '127.0.0.1', 28),
+(117, 'Suppression d\'une horaire réussie', '2024-05-29 03:35:45', '127.0.0.1', 28),
+(118, 'Ajout d\'une horaire réussie', '2024-05-29 03:35:59', '127.0.0.1', 28),
+(119, 'Suppression d\'une horaire réussie', '2024-05-29 03:36:17', '127.0.0.1', 28),
+(120, 'Ajout réussi d\'un administrateur', '2024-05-29 03:37:11', '127.0.0.1', 28);
 
 -- --------------------------------------------------------
 
@@ -144,6 +95,8 @@ CREATE TABLE IF NOT EXISTS `consentement` (
 --
 
 INSERT INTO `consentement` (`id`, `consent`, `email`, `prenom`, `nom`, `date_enregistrement`) VALUES
+(14, 'Oui', 'terencerenardtravail@gmail.com', 'Terence', 'Renard', '2024-01-24 01:57:29'),
+(15, 'Oui', 'terencerenardtravail@gmail.com', 'Terence', 'Renard', '2024-01-24 02:14:19'),
 (20, 'Oui', 'Pouet@Pouet.com', 'Terence', 'Renard', '2024-03-13 23:17:44');
 
 -- --------------------------------------------------------
@@ -160,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `horaires` (
   `heure_debut` time NOT NULL,
   `heure_fin` time NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1982 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1998 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `horaires`
@@ -271,7 +224,6 @@ INSERT INTO `horaires` (`id`, `nom`, `date_complet`, `heure_debut`, `heure_fin`)
 (362, 'Ouverture', '2024-06-13', '09:00:00', '16:30:00'),
 (366, 'Ouverture', '2024-06-17', '09:00:00', '18:00:00'),
 (367, 'Ouverture', '2024-06-18', '09:00:00', '16:30:00'),
-(368, 'Ouverture', '2024-05-30', '09:00:00', '16:30:00'),
 (372, 'Ouverture', '2024-06-03', '09:00:00', '18:00:00'),
 (373, 'Ouverture', '2024-06-04', '09:00:00', '16:30:00'),
 (374, 'Ouverture', '2024-06-05', '09:00:00', '18:00:00'),
@@ -280,9 +232,6 @@ INSERT INTO `horaires` (`id`, `nom`, `date_complet`, `heure_debut`, `heure_fin`)
 (379, 'Ouverture', '2024-05-21', '09:00:00', '16:30:00'),
 (380, 'Ouverture', '2024-05-22', '09:00:00', '18:00:00'),
 (381, 'Ouverture', '2024-05-23', '09:00:00', '16:30:00'),
-(385, 'Ouverture', '2024-05-27', '09:00:00', '18:00:00'),
-(386, 'Ouverture', '2024-05-28', '09:00:00', '16:30:00'),
-(387, 'Ouverture', '2024-05-29', '09:00:00', '18:00:00'),
 (391, 'Ouverture', '2024-05-13', '09:00:00', '18:00:00'),
 (392, 'Ouverture', '2024-05-14', '09:00:00', '16:30:00'),
 (393, 'Ouverture', '2024-05-15', '09:00:00', '18:00:00'),
@@ -690,7 +639,6 @@ INSERT INTO `horaires` (`id`, `nom`, `date_complet`, `heure_debut`, `heure_fin`)
 (1385, 'Ouverture', '2024-06-13', '09:00:00', '16:30:00'),
 (1389, 'Ouverture', '2024-06-17', '09:00:00', '18:00:00'),
 (1390, 'Ouverture', '2024-06-18', '09:00:00', '16:30:00'),
-(1391, 'Ouverture', '2024-05-30', '09:00:00', '16:30:00'),
 (1395, 'Ouverture', '2024-06-03', '09:00:00', '18:00:00'),
 (1396, 'Ouverture', '2024-06-04', '09:00:00', '16:30:00'),
 (1397, 'Ouverture', '2024-06-05', '09:00:00', '18:00:00'),
@@ -699,9 +647,6 @@ INSERT INTO `horaires` (`id`, `nom`, `date_complet`, `heure_debut`, `heure_fin`)
 (1402, 'Ouverture', '2024-05-21', '09:00:00', '16:30:00'),
 (1403, 'Ouverture', '2024-05-22', '09:00:00', '18:00:00'),
 (1404, 'Ouverture', '2024-05-23', '09:00:00', '16:30:00'),
-(1408, 'Ouverture', '2024-05-27', '09:00:00', '18:00:00'),
-(1409, 'Ouverture', '2024-05-28', '09:00:00', '16:30:00'),
-(1410, 'Ouverture', '2024-05-29', '09:00:00', '18:00:00'),
 (1414, 'Ouverture', '2024-05-13', '09:00:00', '18:00:00'),
 (1415, 'Ouverture', '2024-05-14', '09:00:00', '16:30:00'),
 (1416, 'Ouverture', '2024-05-15', '09:00:00', '18:00:00'),
@@ -1065,7 +1010,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `idRole` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_idRole` (`idRole`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `user`
@@ -1077,6 +1022,12 @@ INSERT INTO `user` (`id`, `email`, `mdp`, `pseudo`, `nom`, `prenom`, `idRole`) V
 --
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `action`
+--
+ALTER TABLE `action`
+  ADD CONSTRAINT `fk_utilisateur` FOREIGN KEY (`utilisateur_id`) REFERENCES `user` (`id`);
 
 --
 -- Contraintes pour la table `user`
