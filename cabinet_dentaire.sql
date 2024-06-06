@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `action` (
   `utilisateur_id` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_utilisateur` (`utilisateur_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=182 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=182 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `action`
@@ -149,24 +149,14 @@ CREATE TABLE IF NOT EXISTS `consentement` (
   `nom` varchar(255) NOT NULL,
   `date_enregistrement` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `consentement`
 --
 
 INSERT INTO `consentement` (`id`, `consent`, `email`, `prenom`, `nom`, `date_enregistrement`) VALUES
-(14, 'Oui', 'terencerenardtravail@gmail.com', 'Terence', 'Renard', '2024-01-24 01:57:29'),
-(15, 'Oui', 'terencerenardtravail@gmail.com', 'Terence', 'Renard', '2024-01-24 02:14:19'),
-(20, 'Oui', 'Pouet@Pouet.com', 'Terence', 'Renard', '2024-03-13 23:17:44'),
-(21, 'Oui', 'terence.renard@gmail.com', 'Terence', 'Renard', '2024-06-05 00:29:13'),
-(22, 'Oui', 'terence.renard@gmail.com', 'Terence', 'Renard', '2024-06-05 00:31:33'),
-(23, 'Oui', 'terence.renard@gmail.com', 'Terence', 'Renard', '2024-06-05 00:32:34'),
-(24, 'Oui', '', 'Terence', 'admin', '2024-06-05 00:33:53'),
-(25, 'Oui', '', 'Terence', 'admin', '2024-06-05 00:45:09'),
-(26, 'Oui', 'terence.renard@gmail.com', 'Terence', 'Renard', '2024-06-05 00:46:28'),
-(27, 'Oui', 'terence.renard@gmail.com', 'Terence', 'Renard', '2024-06-06 10:03:36'),
-(28, 'Oui', '', 'Terence', 'Renard', '2024-06-06 10:04:04');
+(20, 'Oui', 'Pouet@Pouet.com', 'Terence', 'Renard', '2024-03-13 23:17:44');
 
 -- --------------------------------------------------------
 
@@ -184,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `horaires` (
   `modifie_par` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_modifie_par` (`modifie_par`)
-) ENGINE=InnoDB AUTO_INCREMENT=2032 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2032 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `horaires`
@@ -1061,7 +1051,7 @@ CREATE TABLE IF NOT EXISTS `role` (
   `id` int NOT NULL AUTO_INCREMENT,
   `role` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `role`
@@ -1087,7 +1077,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `idRole` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_idRole` (`idRole`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `user`
@@ -1110,18 +1100,7 @@ CREATE TABLE IF NOT EXISTS `vieux_mdps` (
   `change_a` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `fk_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Déchargement des données de la table `vieux_mdps`
---
-
-INSERT INTO `vieux_mdps` (`id`, `user_id`, `vieux_mdp`, `change_a`) VALUES
-(13, 28, '$2y$10$Orv6PRwSuP.hyrO03.XkKuj1Xr5kZUMTE2Mae8gaJ2PUARs.rlNH6', '2024-05-31 00:05:26');
-
---
--- Contraintes pour les tables déchargées
---
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Contraintes pour la table `action`
