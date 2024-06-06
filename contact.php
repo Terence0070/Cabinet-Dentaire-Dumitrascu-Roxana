@@ -78,7 +78,7 @@ function myMail($dest, $subject, $body) {
   }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $response = json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=XXXXXresponse=' . $_POST['recaptchaResponse']));
+  $response = json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6Ld7C-0pAAAAANciectNfBiPr309G2nur-nNqCyx&response=' . $_POST['recaptchaResponse']));
 
   if ($response->success) {
     $nom = trim($_POST['nom']);
@@ -254,12 +254,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 </div>
-        <script src="https://www.google.com/recaptcha/api.js?render=6LeBOlgpAAAAAGqyC_7DKnq182rewcM6_IEo71dy"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6Ld7C-0pAAAAAFgbGBf_8ceOm6JxLpM0j2u_vYxo"></script>
         <script>
           function onClick(e) {
             e.preventDefault();
             grecaptcha.ready(function() {
-              grecaptcha.execute('6LeBOlgpAAAAAGqyC_7DKnq182rewcM6_IEo71dy', {action: 'submit'}).then(function(token) {
+              grecaptcha.execute('6Ld7C-0pAAAAAFgbGBf_8ceOm6JxLpM0j2u_vYxo', {action: 'submit'}).then(function(token) {
                 document.getElementById("recaptchaResponse").value = token;
                 document.querySelector("form").submit();
               });

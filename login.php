@@ -9,7 +9,7 @@ require_once('Include/Menu/header.php');
 require_once('Include/Modele/Authentification.php');
 
 // Clé secrète reCAPTCHA
-$recaptchaSecret = "XXXXX";
+$recaptchaSecret = "6Ld7C-0pAAAAANciectNfBiPr309G2nur-nNqCyx";
 
 // Utiliser le modèle "Authentification.php"
 $authentification = new Authentification($connexion, $recaptchaSecret);
@@ -55,7 +55,7 @@ $authResult = $authentification->checkSessionAndAuthenticate();
     </div>
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js?render=6LeBOlgpAAAAAGqyC_7DKnq182rewcM6_IEo71dy"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Ld7C-0pAAAAAFgbGBf_8ceOm6JxLpM0j2u_vYxo"></script>
 <script>
     function onSubmit(token) {
         document.getElementById("recaptchaResponse").value = token;
@@ -65,7 +65,7 @@ $authResult = $authentification->checkSessionAndAuthenticate();
     function onClick(e) {
         e.preventDefault();
         grecaptcha.ready(function() {
-            grecaptcha.execute('6LeBOlgpAAAAAGqyC_7DKnq182rewcM6_IEo71dy', { action: 'submit' }).then(onSubmit);
+            grecaptcha.execute('6Ld7C-0pAAAAAFgbGBf_8ceOm6JxLpM0j2u_vYxo', { action: 'submit' }).then(onSubmit);
         });
         // Validation des champs requis
         var pseudo = document.getElementById("pseudo").value;
