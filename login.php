@@ -9,7 +9,7 @@ require_once('Include/Menu/header.php');
 require_once('Include/Modele/Authentification.php');
 
 // Clé secrète reCAPTCHA
-$recaptchaSecret = "6Ld7C-0pAAAAANciectNfBiPr309G2nur-nNqCyx";
+$recaptchaSecret = "XXXXX";
 
 // Utiliser le modèle "Authentification.php"
 $authentification = new Authentification($connexion, $recaptchaSecret);
