@@ -78,7 +78,7 @@ function myMail($dest, $subject, $body) {
   }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $response = json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6Ld7C-0pAAAAANciectNfBiPr309G2nur-nNqCyx&response=' . $_POST['recaptchaResponse']));
+  $response = json_decode(file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=XXXXX&response=' . $_POST['recaptchaResponse']));
 
   if ($response->success) {
     $nom = trim($_POST['nom']);
