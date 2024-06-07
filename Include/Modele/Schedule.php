@@ -129,6 +129,12 @@ class Schedule {
             die("Erreur d'exécution de la requête : " . mysqli_error($this->connexion));
         }
     }
+    
+    
+    
+
+
+
 
     /**
      * @param deleteSchedule $id
